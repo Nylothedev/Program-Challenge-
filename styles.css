@@ -1,3 +1,18 @@
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* General body styling */
+body {
+    font-family: Arial, sans-serif;
+    color: #ffffff;
+    min-height: 100vh;
+}
+
+/* Full-page animated black & white background on the home page */
 .animation {
     position: fixed;
     top: 0;
@@ -5,15 +20,15 @@
     width: 100%;
     height: 100vh;
 
-    /* Black & white animated gradient */
-    background: linear-gradient(135deg, #000000, #555555, #aaaaaa, #ffffff);
+    /* Black & white gradient */
+    background: linear-gradient(135deg, #000000, #444444, #aaaaaa, #ffffff);
     background-size: 400% 400%;
     animation: gradientAnimation 12s ease infinite;
+
     z-index: -1;
 }
 
-}
-
+/* Gradient animation */
 @keyframes gradientAnimation {
     0% {
         background-position: 0% 50%;
@@ -24,4 +39,79 @@
     100% {
         background-position: 0% 50%;
     }
+}
+
+/* Content on the home page */
+.content {
+    position: relative;
+    z-index: 1;
+    text-align: center;
+    padding-top: 20vh;
+}
+
+.content h1 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+}
+
+/* Main button (About Me) */
+.main-button {
+    display: inline-block;
+    padding: 15px 30px;
+    font-size: 18px;
+    color: #ffffff;
+    background-color: rgba(0, 0, 0, 0.7);
+    text-decoration: none;
+    border-radius: 6px;
+    border: 1px solid #ffffff;
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+.main-button:hover {
+    background-color: rgba(255, 255, 255, 0.15);
+    transform: translateY(-2px);
+}
+
+/* About page layout (white background and dark text) */
+.about-content {
+    max-width: 800px;
+    margin: 40px auto;
+    padding: 20px;
+    color: #222222;
+    background-color: #f7f7f7;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.about-content h1 {
+    margin-bottom: 15px;
+}
+
+.about-content p {
+    margin-bottom: 10px;
+    line-height: 1.5;
+}
+
+/* Greeting box on About page */
+.greeting-box {
+    margin: 20px 0;
+    padding: 15px 20px;
+    border-radius: 8px;
+    border: 2px solid #333333;
+    background-color: #ffffff;
+    font-size: 18px;
+    font-weight: 500;
+}
+
+/* Back link */
+.back-link {
+    display: inline-block;
+    margin-top: 20px;
+    color: #333333;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.back-link:hover {
+    text-decoration: underline;
 }
