@@ -1,20 +1,14 @@
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-body {
-    font-family: Arial, sans-serif;
-    overflow: hidden;
-}
-
 .animation {
-    position: absolute;
+    position: fixed;           /* fixed so it fills the viewport and stays put */
+    top: 0;
+    left: 0;
     width: 100%;
     height: 100vh;
-    background: linear-gradient(135deg, #ff6b6b, #f7d94d);
-    animation: gradientAnimation 5s ease infinite;
+
+    background: linear-gradient(135deg, #ff6b6b, #f7d94d, #4dabf7, #9775fa);
+    background-size: 400% 400%;   /* important so the gradient has room to move */
+
+    animation: gradientAnimation 12s ease infinite;
     z-index: -1;
 }
 
@@ -28,40 +22,4 @@ body {
     100% {
         background-position: 0% 50%;
     }
-}
-
-.content {
-    position: relative;
-    z-index: 1;
-    text-align: center;
-    color: white;
-    margin-top: 20%;
-}
-
-.main-button {
-    display: inline-block;
-    padding: 15px 30px;
-    font-size: 18px;
-    color: white;
-    background-color: #333;
-    text-decoration: none;
-    border-radius: 5px;
-    transition: background 0.3s;
-}
-
-.main-button:hover {
-    background-color: #555;
-}
-
-.about-content {
-    padding: 20px;
-    text-align: center;
-}
-
-.about-content a {
-    display: inline-block;
-    margin-top: 20px;
-    color: #333;
-    text-decoration: none;
-    font-size: 16px;
 }
