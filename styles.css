@@ -1,3 +1,9 @@
+/* Make all regular text (body content) black */
+body {
+    color: black;
+    font-family: Arial, sans-serif;
+}
+
 /* Set the color of all links */
 a {
     color: #1e90ff; /* DodgerBlue */
